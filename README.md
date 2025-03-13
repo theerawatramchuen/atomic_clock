@@ -93,3 +93,13 @@ try:
 except Exception as e:
     print(f"🔥 Critical error: {e}")
 ```
+### Time format modification
+To format the time as "BANGKOK 2025-03-13 10:57:00.1" with tenths of a second and no timezone abbreviation, use this revised code:<br>
+```
+# Format without microseconds and timezone
+fmt = "%Y-%m-%d %H:%M:%S"
+# Calculate tenths of a second from microseconds
+tenths = bangkok_time.microsecond // 100000
+# Construct the formatted string
+print(f"🕒 BANGKOK {bangkok_time.strftime(fmt)}.{tenths}")
+```
